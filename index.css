@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+     align-items: center;
+    flex-direction: column;
+   margin-top: 20px;
+   background-color: hsl(222, 26%, 31%);
+    font-family: 'League Spartan', sans-serif;
+    transition: 0.5s;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.calculator-buttons{
+    display: grid;
+ grid-template-columns: repeat(4, 1fr);
+    background-color:   hsl(223, 31%, 20%);
+    padding: 20px;
+   gap: 8px;
+   border-radius: 5px;
+   height: 70vh;
+   transition: 0.5s;
+}
+.btn{
+    background-color: hsl(30, 25%, 89%);
+    padding: 3vh;
+    text-align: center;
+    border-radius: 7px;
+    border: none;
+    font-weight: 700;
+    font-size: 150%;
+    color: hsl(222, 26%, 31%);
+}
+
+.btn:hover{
+    background-color: white;
+    
+}
+.key-reset:hover{
+    background-color: hsl(225, 21%, 49%);
+}
+.delete:hover{
+    background-color: hsl(225, 21%, 49%) ;
+}
+.key-equal:hover{
+    background-color: hsl(6, 74%, 56%);
+}
+.key-reset{
+    grid-column: span 2;
+}
+
+.btn{
+    font-family: 'League Spartan', sans-serif;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 0px  hsl(28, 16%, 65%);
+}
+.key-equal{
+    grid-column: span 2;
+    background-color: hsl(6, 63%, 50%);
+    color: white;
+    box-shadow: 2px 2px 2px 0px hsl(6, 70%, 34%);
+}
+.answer{
+    background-color: hsl(224, 36%, 15%) ;
+    height:15vh;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.delete{
+background-color: hsl(222, 26%, 31%);
+color: white;
+box-shadow: 2px 2px 2px 0px  hsl(224, 28%, 35%);
+}
+.key-reset{
+    background-color: hsl(222, 26%, 31%);
+    color: white;
+    box-shadow: 2px 2px 2px 0px  hsl(224, 28%, 35%);
+}
+
+.calc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.number-cursor{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+}
+.indicator{
+    position: relative;
+    height: 20px;
+    width: 60px;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.indicators{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.theme{
+    font-size: 10px;
+    color: hsl(30, 25%, 89%);
+    position: relative;
+    top: 10px;
+}
+.number{
+    color: hsl(30, 25%, 89%);
+}
+.calc{
+    color: hsl(30, 25%, 89%);
+}
+.cursor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: scale(0.7);
+    background-color: hsl(6, 63%, 50%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.theme-2 .cursor{
+        left: 20px;
+        background-color:hsl(25, 98%, 40%);
+      }
+      
+      .theme-3 .cursor{
+        left: 40px;
+        background-color: hsl(176, 100%, 44%);
+      }
+.theme-2{
+    background-color: hsl(0, 5%, 81%);
+}
+.one1,
+.two2{
+    padding-right: 7px;
+}
+
+.calc-2,
+.number-2,
+.theme-2{
+    color: black;
+    transition: 0.5s;
+}
+.calc-3,
+.number-3,
+.btn-3,
+.theme-3,
+.delete-3,
+.reset-3{
+color: hsl(52, 100%, 62%);
+transition: 0.5s;
+
+}
+.delete-3,
+.reset-3{
+background-color:hsl(281, 89%, 26%);
+box-shadow: 1px 2px 1px 2px hsl(290, 70%, 36%);
+}
+.body-2{
+    background-color: hsl(0, 0%, 90%);
+    transition: 0.5s;
+}
+
+.body-3{
+    background-color: hsl(268, 75%, 9%);
+    transition: 0.5s;
+}
+
+
+.delete-2,
+.reset-2{
+    background-color:hsl(185, 42%, 37%) ;
+    box-shadow: 2px 2px 2px 2px hsl(185, 58%, 25%);
+    color: white;
+    transition: 0.5s;
+}
+.btn-background-2{
+    background-color: hsl(0, 5%, 81%);
+}
+.btn-2{
+    background-color: hsl(268, 47%, 21%) ;
+}
+.answer-2{
+    background-color: hsl(0, 0%, 93%);
+}
+
+.answer-3,
+.btn-background-3{
+    background-color: hsl(268, 47%, 21%);
+    transition: 0.5s;
+}
+@media screen and (max-width: 489px) {
+.btn{
+    padding: 9px;
+}
+}
+
+.display{
+    display: flex;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+ font-size: 280%;
+ padding: 20px;
+}
+
+.answer{
+    overflow: hidden;
+}
